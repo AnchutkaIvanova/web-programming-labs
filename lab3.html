@@ -6,6 +6,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Иванова Анна Алексеевна. Лабораторная работа 3</title>
     <link rel="stylesheet" href="main.css">
+    <style>
+        body {
+            font-size: 20px;
+        }
+        main {
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+        div {
+            text-align: justify;
+            text-indent: 1.25cm;
+            line-height: 150%;
+        }
+        .formula {
+            color: black;
+            font-weight: bold;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            border: 1px solid;
+            text-indent: 0;
+            margin: 10px 40px 10px 40px;
+            padding: 5px;
+            opacity: 0.6;
+            transition: 600ms 0.5s;
+        }
+        .formula:hover {
+            opacity: 1;
+            color: blue;
+        }
+        .formula-description {
+            color: black;
+            margin-left: 2cm;
+            text-indent: 0;
+        }
+        .shadow {
+            text-shadow: 7px 7px 3px rgb(167, 121, 210);
+        }
+        .shadow1 {
+            text-shadow: -8px 7px 3px blue;
+        }
+        .shadow2 {
+            text-shadow: 0px 0px 2px blue;
+        }
+        .shadow3:hover {
+            transition: 1000ms 0.7s;
+            text-shadow: 7px 7px 3px rgb(191, 82, 255);
+        }
+
+        h1 {
+            font-size: 26pt;
+
+        }
+
+        h1:before {
+            content: '';
+            display: block;
+            height: 3px; 
+            background: #0011ff; 
+            width: 50px; 
+            margin: 0px;
+            transition: 1s;
+        }
+
+        h1:hover:before {
+            width: 300px;
+            transition: 1s;
+        }
+
+        h1:after {
+            content: '';
+            display: block;
+            height: 3px; 
+            background: #0011ff; 
+            width: 50px; 
+            margin: 0px;
+            transition: 1s;
+        }
+
+        h1:hover:after {
+            width: 300px;
+            transition: 1s;
+        }
+    </style>
 </head>
 <body>
     <header >
@@ -13,6 +96,64 @@
     </header>
 
     <main>
+        <h1 class="shadow3">Расчет (формула)</h1>
+
+        <div>
+        Расчет сводится к определению разницы между активами и пассивами
+        (обязательствами), которые определяются следующим образом.
+        </div>
+
+        <div>
+        В состав активов, принимаемых к расчету, включаются все активы
+        организации, за исключением дебиторской задолженности учредителей
+        (участников, акционеров, собственников, членов) по взносам (вкладам)
+        в уставный капитал (уставный фонд, паевой фонд, складочный
+        капитал), по оплате акций.
+        </div>
+
+        <div>
+        В состав обязательств, принимаемых к расчету, включаются все
+        обязательства, кроме доходов будущих периодов. Но не всех доходов
+        будущих периодов, а тех, которые признаны организацией в связи с
+        получением государственной помощи, а также в связи с безвозмездным
+        получением имущества. Эти доходы фактически являются
+        собственным капиталом организации, поэтому для целей расчета
+        стоимости чистых активов исключаются из раздела краткосрочных
+        обязательств баланса (строка 1530).
+        </div>
+
+        <div>
+        Т.е. формула расчета чистых активов по Бухгалтерскому балансу
+        предприятия следующая:
+        </div>
+
+        <div class="formula">
+        Чистые активы = (стр.1600 - ЗУ) - (стр.1400 + стр.1500 - ДБП)
+        </div>
+        <div class="formula-description">
+        где ЗУ – задолженность учредителей по взносам в уставный капитал (в
+        Балансе отдельно не выделяется и отражается в составе
+        краткосрочной дебиторской задолженности);
+        </div>
+
+        <div class="formula-description">
+        ДБП – доходы будущих периодов, признанных организацией в связи с
+        получением государственной помощи, а также в связи с безвозмездным
+        получением имущества.
+        </div>
+
+        <div>
+        Альтернативным способом расчет стоимости чистых активов, дающих
+        точно такой же результат как и формула выше будет:
+        </div>
+
+        <div class="formula">
+        Чистые активы = стр.1300 - ЗУ + ДБП
+        </div>
+
+        <div class="shadow">Тень</div>
+        <div class="shadow1">Синяя тень</div>
+        <div class="shadow2">Синее размытие</div>
     </main>
 
     <footer>
