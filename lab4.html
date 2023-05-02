@@ -16,6 +16,15 @@
             height: 250px;
             overflow-y: auto;
             overflow-x: hidden;
+            position: relative;
+            background: linear-gradient(#ccf, #ddf);
+        }
+        .second{
+            z-index: -1;
+            left: 380px;
+            top: 120px;
+            position: fixed;
+
         }
     </style>
 </head>
@@ -37,7 +46,7 @@
          вам по секрету, всё это важно.
        </div>
 
-       <div>
+       <div class="second">
          Во второй главе я подробно рассказываю о том, откуда взялись акции и корпорации, чтобы вы поняли
          базовую идею организации современной большой компании – типа Apple или Google. Как было у римлян, 
          у генуэзских купцов и у английской королевы, кто кормил гусей, кто устраивал туры в Тай и кто кого
