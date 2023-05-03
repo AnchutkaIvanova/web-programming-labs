@@ -7,17 +7,18 @@
     <title>Иванова Анна Алексеевна. Лабораторная работа 4</title>
     <link rel="stylesheet" href="main.css">
     <style>
-        div {
+         main div {
             margin: 20px;
             border: 1px solid;
             border-radius: 7px;
             padding: 7px;
             width: 500px;
-            height: 250px;
+            height: 120px;
             overflow-y: auto;
             overflow-x: hidden;
             position: relative;
             background: linear-gradient(#ccf, #ddf);
+            z-index: 1;
         }
         .second{
             z-index: -1;
@@ -25,6 +26,96 @@
             top: 120px;
             position: fixed;
 
+        }
+            
+        .oblako1 {
+            border: 1px solid;
+            border-radius: 100px/50px;
+            background-color: #ef94ff;
+            top: 50px;
+            left: 340px;
+            width: 100px;
+            height: 20px;
+            text-align: center;
+            padding: 10px;
+            color: rgb(44, 0, 114);
+            box-shadow: 10px 5px 7px rgb(97, 89, 136);
+            z-index: 4;
+        }
+        .oblako2 {
+            border: 1px solid;
+            border-radius: 100px/50px;
+            background-color: #ef94ff;
+            top: 5px;
+            left: 310px;
+            width: 70px;
+            height: 25px;
+            text-align: center;
+            padding: 10px;
+            color: rgb(44, 0, 114);
+            box-shadow: 10px 5px 7px rgb(97, 89, 136);
+            z-index: 3;
+        
+            
+        } 
+        .oblako3 {
+            border: 1px solid;
+            border-radius: 100px/50px;
+            background-color: #ef94ff;
+            top: -40px;
+            left: 280px;
+            width: 50px;
+            height: 15px;
+            text-align: center;
+            padding: 10px;
+            color: rgb(44, 0, 114);
+            box-shadow: 10px 5px 7px rgb(97, 89, 136);
+            z-index: 2;
+            
+        }
+        .oblako4 {
+            border: 1px solid;
+            border-radius: 150px/100px;
+            background-color: #ef94ff;
+            top: -70px;
+            left: 270px;
+            width: 15px;
+            height: 2px;
+            text-align: center;
+            padding: 10px;
+            color: rgb(44, 0, 114);
+            box-shadow: 10px 5px 7px rgb(97, 89, 136);
+            z-index: 2;
+            
+        }
+        
+        .photo {
+            position: absolute;
+            width: 800px;
+            height: 500px;
+            top: 560px;
+        }
+        aside{
+            position: absolute;
+            left: 0;
+            width: 300px;
+            background: black;
+        }
+
+        aside div{
+            color: white;
+            padding: 10px;
+            text-indent: 20px;
+        }
+        main{
+            margin-left: 320px;
+        }
+        footer {
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 10;
+            position: fixed;
         }
     </style>
 </head>
@@ -55,6 +146,7 @@
              обстоит на самом деле. У меня есть чит-коды.
         </div>
     </aside>
+
     <main>
        <div> 
          В первой главе я задаю тон всей книге: это в первую очередь развлечение 
@@ -88,6 +180,18 @@
          Что андеррайтеры называют красной селёдкой и чем они похожи на организаторов концерта Стаса Михайлова?
          Все эти тайны будут раскрыты.
        </div>
+
+       <div class="oblako1">
+        Рик,смотри!
+       </div>
+       <div class="oblako2" > </div>
+       <div class="oblako3" > </div>
+       <div class="oblako4" > </div>
+
+    <img class="photo" src="http://klubmama.ru/uploads/posts/2022-08/1661800613_55-klubmama-ru-p-rik-i-morti-podelki-foto-58.png" >
+    
+
+
     </main>
 
     <footer>
