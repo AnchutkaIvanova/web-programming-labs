@@ -1,19 +1,23 @@
 body {
-    background-color:  rgb(189, 183, 240);
-    color: rgb(94, 5, 5);
+    background-color:  rgb(240, 183, 221);
+    color: rgb(243, 55, 55);
     font-family: Arial;
     margin: 0px;
 }
 
 header {
     background: linear-gradient(to right , red,orange,yellow,green,lightblue, blue, rgb(162, 0, 255)); 
-    color: rgb(48, 0, 151);
+    color: rgb(0, 103, 151);
     padding: 10px; 
     font-size: 16pt;
 }
 
+main{
+    margin: 10px 20px;
+}
+
 header:hover {
-    background: linear-gradient(to top, rgb(189, 183, 240), blue );
+    background: linear-gradient(to top, rgb(212, 208, 252), hsl(240, 100%, 50%) );
 }
 
 header:active {
@@ -22,8 +26,8 @@ header:active {
 }
 
 footer {
-    background: linear-gradient(to right , red,orange,yellow,green,lightblue, blue, rgb(162, 0, 255));
-    color: maroon;
+    background: linear-gradient(to right , red,orange,yellow,rgb(21, 241, 21),lightblue, blue, rgb(162, 0, 255));
+    color: rgb(175, 10, 10);
     padding: 10px; 
     font-size: 14pt;
     margin: 0px;
@@ -32,7 +36,7 @@ footer {
 }
 
 footer:hover {
-    background: linear-gradient(to bottom, rgb(189, 183, 240), blue );
+    background: linear-gradient(to bottom, rgb(189, 183, 240), rgb(64, 64, 243) );
 }
 
 footer:active {
@@ -41,14 +45,14 @@ footer:active {
 }
 
 a{
-    color: rgb(144, 0, 247);
+    color: rgb(149, 17, 243);
     text-decoration: none;
     text-shadow: 7px 5px 9px rgb(0, 0, 0);
     transition: 700ms 3s;
 }
 
 a:visited {
-    color: rgb(253, 5, 212);
+    color: rgb(252, 15, 212);
 }
 
 a:hover{
@@ -60,5 +64,5 @@ a:hover{
 }
 a:active {
     color: pink;
-    background-color: rgb(93, 0, 255);
+    background-color: rgb(94, 18, 224);
 }
