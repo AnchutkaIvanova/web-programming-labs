@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Иванова Анна Алексеевна.Лабораторная работа 6</title>
+    <link rel="stylesheet" href="main.css"
+    <style>
+        .game {
+            border: 1px solid;
+            border-radius: 17px;
+            text-align: center;
+            padding: 8px;
+            margin: 10px auto;
+       }
+        </style>
+        <script>
+            let number;
+            let count = 0;
+            function startGame() {
+                number = Math.floor(Math.random() * 100) + 1;
+                let screens = document.getElementsByClassName('game');
+                screens[0].style.display = 'none';
+                screens[1].style.display = 'block';  
+               }
+               function guess() {
+                    count++;
+                    let input = document.getElementById('user-number');
+                    let userNumber = parseInt(input.value);
+                    let message = document.getElementById('result');
+                    if (userNumber > number) {
+                        message.innerHTML = 'Вы ввели слишком большое число';
+                    }
+                    else if (userNumber < number) {
+                        message.innerHTML = 'Вы ввели слишком маленькое число';
+                    }
+                    else {
+                        let screens = document.getElementsByClassName('game');
+                        screens[1].style.display = 'none';
+                        screens[2].style.display = 'block';
+                        document.getElementById('number').innerHTML = number;
+                        document.getElementById('try-count').innerHTML = count;
+                    }
+                    if ( 1 > userNumber ) {
+                        message.innerHTML = 'Число должно быть в диапазоне от 1 до 100';
+                    }
+                    else if (userNumber > 100) {
+                        message.innerHTML = 'Число должно быть в диапазоне от 1 до 100';
+                    }
+    
+                    }
+               function again() {
+                count=0
+                number = Math.floor(Math.random() * 100) + 1;
+                let screens = document.getElementsByClassName('game');
+                document.getElementById('user-number').value='';
+                document.getElementById('try-count').innerHTML = count;
+                document.getElementById('result').innerHTML = '';
+                screens[1].style.display = 'block';
+                screens[2].style.display = 'none';
+               }
+               
+               function prav() {
+                let screens = document.getElementsByClassName('pom');
+                screens[0].style.display = 'none';
+                screens[1].style.display = 'block';
+               }
+               function skrit() {
+                let screens = document.getElementsByClassName('pom');
+                screens[1].style.display = 'none';
+                screens[0].style.display = 'block';
+               }
+               function changeColor(div) {
+                    if(div.style.backgroundColor == 'blue') {
+                        div.style.backgroundColor = 'blueviolet';
+                        div.style.color = 'lime';
+                        document.getElementById('color-name').innerHTML = 'фиолетовый';
+                    }
+                    else if(div.style.backgroundColor == 'blueviolet') {
+                        div.style.backgroundColor = 'pink';
+                        div.style.color = 'navy';
+                        document.getElementById('color-name').innerHTML = 'розовый';
+                    }
+                    else if(div.style.backgroundColor == 'pink') {
+                        div.style.backgroundColor = 'coral';
+                        div.style.color = 'black';
+                        document.getElementById('color-name').innerHTML = 'оранжевый';
+                    }
+                    else if(div.style.backgroundColor == 'coral') {
+                        div.style.backgroundColor = 'gold';
+                        div.style.color = 'green';
+                        document.getElementById('color-name').innerHTML = 'желтый';
+                    }
+                    else if(div.style.backgroundColor == 'gold') {
+                        div.style.backgroundColor = 'skyblue';
+                        div.style.color = 'indigo';
+                        document.getElementById('color-name').innerHTML = 'голубой';
+                    }
+                    else {
+                        div.style.backgroundColor = 'blue';
+                        div.style.color = 'white';
+                        document.getElementById('color-name').innerHTML = ' синий';
+                    }
+                }
+                function perem(click) {
+                    if(click.style.float == 'left') {
+                        click.style.float = 'right';
+                        click.style.transition = '10000ms 0.5s';
+                        click.style.transform = 'rotate(4turn)';
+                    }
+                    else {
+                        click.style.float = 'left';
+                        click.style.transition = '1000ms 1s';
+                        click.style.transform == 'rotate(0)';
+                    }
+                }
+                function yv(tyk){
+                    if(tyk.style.width == '100px') {
+                        tyk.style.width = '150px';
+                        tyk.style.backgroundColor = 'salmon';
+                    }
+                    else if(tyk.style.width == '150px') {
+                        tyk.style.width = '200px';
+                        tyk.style.backgroundColor = 'red';
+                    }
+                    else if(tyk.style.width == '200px') {
+                        tyk.style.width = '250px';
+                        tyk.style.backgroundColor = 'hotpink';
+                    }
+                    else if(tyk.style.width == '250px') {
+                        tyk.style.width = '300px';
+                        tyk.style.backgroundColor = 'tomato';
+                    }
+                    else if(tyk.style.width == '300px') {
+                        tyk.style.width = '350px';
+                        tyk.style.backgroundColor = 'yellow';
+                    }
+                    else if(tyk.style.width == '350px') {
+                        tyk.style.width = '400px';
+                        tyk.style.backgroundColor = 'lime';
+                    }
+                    else if(tyk.style.width == '400px') {
+                        tyk.style.width = '450px';
+                        tyk.style.backgroundColor = 'mediumseagreen';
+                    }
+                    else if(tyk.style.width == '450px') {
+                        tyk.style.width = '500px';
+                        tyk.style.backgroundColor = 'aquamarine';
+                    }
+                    else if(tyk.style.width == '500px') {
+                        tyk.style.width = '550px';
+                        tyk.style.backgroundColor = 'skyblue';
+                    }
+                    else if(tyk.style.width == '550px') {
+                        tyk.style.width = '600px';
+                        tyk.style.backgroundColor = 'mediumblue';
+                    }
+                    else if(tyk.style.width == '600px') {
+                        tyk.style.width = '650px';
+                        tyk.style.backgroundColor = 'mediumslateblue';
+                    }
+                    else if(tyk.style.width == '650px') {
+                        tyk.style.width = '700px';
+                        tyk.style.backgroundColor = 'violet';
+                    }
+                    else if(tyk.style.width == '700px') {
+                        tyk.style.width = '750px';
+                        tyk.style.backgroundColor = 'magenta';
+                    }
+                    else if(tyk.style.width == '750px') {
+                        tyk.style.width = '800px';
+                        tyk.style.backgroundColor = 'blueviolet';
+                    }
+                    else if(tyk.style.width == '800px') {
+                        tyk.style.width = '850px';
+                        tyk.style.backgroundColor = 'darkorchid';
+                    }
+                    else if(tyk.style.width == '850px') {
+                        tyk.style.width = '900px';
+                        tyk.style.backgroundColor = 'purple';
+                    }
+                    else if(tyk.style.width == '900px') {
+                        tyk.style.width = '950px';
+                        tyk.style.backgroundColor = 'indigo';
+                    }
+                    else if(tyk.style.width == '950px') {
+                        tyk.style.width = '1000px';
+                        tyk.style.backgroundColor = 'darkslateblue';
+                    }
+                    else {
+                        tyk.style.width = '100px';
+                        tyk.style.backgroundColor = 'fuchsia';
+                    }
+                }
+                function filter() {
+                    let color = document.getElementById('wear-color').value;
+                    let type = document.getElementById('wear-type').value;
+                    let wear = document.getElementById('wear');
+    
+                    if(color == 'Красный' && type == 'Футболка') {
+                        wear.src = 'red-f.jpg'
+                    }
+                    if(color == 'Красный' && type == 'Поло') {
+                        wear.src = 'red-p.jpg'
+                    }
+                    if(color == 'Красный' && type == 'Майка') {
+                        wear.src = 'red-m.jpg'
+                    }
+                    if(color == 'Белый' && type == 'Футболка') {
+                        wear.src = 'white-f.jpg'
+                    }
+                    if(color == 'Белый' && type == 'Поло') {
+                        wear.src = 'white-p.jpg'
+                    }
+                    if(color == 'Белый' && type == 'Майка') {
+                        wear.src = 'white-m.jpg'
+                    }
+                    if(color == 'Черный' && type == 'Футболка') {
+                        wear.src = 'black-f.jpg'
+                    }
+                    if(color == 'Черный' && type == 'Поло') {
+                        wear.src = 'black-p.jpg'
+                    }
+                    if(color == 'Черный' && type == 'Майка') {
+                        wear.src = 'black-m.jpg'
+                    }
+                }
+        </script>
+        <style>
+            .pom {
+                border: 1px solid;
+                border-radius: 20px;
+                width: auto;
+                height: auto;
+                background-color: rgba(253, 16, 55, 0.222);
+                padding: 15px;
+            }
+            .knop {
+                cursor: pointer;
+                display: inline-block;
+            }
+            .color {
+                border: 1px solid;
+                width: 170px;
+                height: 100px;
+                background-color: rgb(54, 16, 224);
+                padding: 15px;
+                margin: 15px;
+                text-align: center;
+                color: aliceblue;
+                cursor: pointer;
+                padding-top: 30px;
+            }
+            .dvig {
+                border: 1px solid;
+                width: 150px;
+                height: 50px;
+                padding-top: 30px;
+                text-align: center;
+                cursor: pointer;
+                background-color: rgb(250, 116, 13);
+                color: aliceblue;
+                float: left;
+                
+                transform: rotate();
+                
+            }
+            .shir {
+                border: 1px solid;
+                width: 100px;
+                height: 50px;
+                padding-top: 30px;
+                text-align: center;
+                cursor: pointer;
+                background-color:rgb(0, 217, 255);
+                position: relative;
+                top: 100px;
+                left: 25px;
+    
+            }
+            .filter {
+                margin-top: 120px;
+                margin-right: 100px;
+                
+            }
+        </style>
+    </head>
+    
+    <body oncopy="return false;" style="user-select: none;">
+        <header >
+            НГТУ, ФБ, Лабораторная работа 6
+        </header>
+        <main>
+            <div class="game">
+                <button onclick="startGame()">
+                    Сыграть в игру
+                </button>
+            </div>
+    
+            <div class="game" style="display: none;">
+                <h1>Угадай число</h1>
+                <div>
+                    Задумано число от 1 до 100. Угадайте какое?<br>
+                    <input type="number" value="" min="1" max="100" id="user-number"><br>
+                    <button onclick="guess()">Угадать</button>
+                    <div id="result"></div>
+                </div>
+            </div>
+    
+            <div class="game" style="display: none;">
+                <h1>Поздравляем, вы выиграли!</h1>
+                <div>
+                    Задуманное число: <span id="number"></span>
+                </div>
+                <div>
+                    Количество попыток: <span id="try-count"></span>
+                </div>
+                <div>
+                    <button onclick="again()">Сыграть еще раз</button>
+                </div>
+            </div>
+            <div class="pom">
+                <button class="knop" onclick="prav()">Правила игры</button>
+            </div>
+            <div class="pom" style="display: none;"> 
+                <button class="knop" onclick="skrit()"> Скрыть правила игры </button>
+                <ol type="I">
+                    <li>Для запуска игры нажмите кнопку "сыграть в игру"</li>
+                    <li>Загаданное число в диапазоне от 0 до 100</li>
+                    <li>Введите число в окошко</li>
+                    <li>Нажмите на кнопку "Угадать"</li>
+                    <li>После завершения игры можно ещ раз сыграть,нажав на кнопку " Сыграть еще раз"</li>
+                </ol>
+             </div>
+             
+             <div class="color" ondblclick="changeColor(this)"> Цвет:<span id="color-name"> синий</span><br> 
+                Для смены цвета щёлкни 2 раза.
+             </div>
+    
+             <div class="dvig" onclick="perem(this)"> Щелкни меня</div>
+    
+             <div class="shir" onclick="yv(this)"></div>
+    
+             <div class="filter">
+                Цвет одежды:
+                <select id="wear-color">
+                    <option>Красный</option>
+                    <option >Белый</option>
+                    <option >Черный</option>
+                    <option >Фиолетовый</option>
+                    <option >Малиновый</option>
+                </select><br>
+    
+                Тип одежды:
+                <select id="wear-type">
+                    <option >Футболка</option>
+                    <option >Юбка</option>
+                    <option >Шапка</option>
+                </select><br>
+    
+                <button onclick="filter()">ОК</button><br>
+    
+                <img id="wear">
+             </div>
+
+            </main>
+
+            <footer>
+                &copy; Иванова Анна Алексеевна, ФБИ-14, 2 курс, 2023
+            </footer>
+            
+        </body>
+        </html>
