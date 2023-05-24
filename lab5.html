@@ -6,19 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Иванова Анна Алексеевна. Лабораторная работа 5</title>
     <link rel="stylesheet" href="main.css">
-    <header>
+    <script>
+        function showSum() {
+            let a = 5154;
+            let b = 7891;
+            let result = a + b;
+            alert('Сумма ' + a +' и ' + b +' равна ' + result);
+        }
+        function showAuthor() {
+            let autor ='Автор страницы:\nИванова Анна Алексеевна';
+            alert(autor);
+        }
     
-    <body>
-        <header onclick="showAuthor()" >
-            НГТУ,ФБ,Лабораторная работа 5
-        </header>
 
-        <main>
-    
-            <div class="message" onclick="showSum()">Сколько будет 5154+7891?</div>
-            <div class="message" onclick="showAuthor()">Узнать,
-                кто автор страницы</div>
-            <div style="margin: 10px;">
+    </script>
+    <style>
+ .message {
+            cursor: pointer;
+            display: inline-block;
+            background-color: rgb(255, 254, 211);
+            border: 1px solid ;
+            border-radius: 15px;
+            width: 350px;
+            height: 35px;
+            padding: 14px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+      <header onclick="showAuthor()">
+      </header>
+
+    <main>
+        <div class="message" onclick="showSum()">Сколько будет 5154+7891?</div>
+        <div class="message"onclick="showAuthor()">Узнать, кто автор страницы</div>
+    </main>
+
+    <footer>
                
                 
         </main>
