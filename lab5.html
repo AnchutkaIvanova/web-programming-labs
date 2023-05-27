@@ -16,11 +16,104 @@
             let result = a + b;
             alert('Сумма ' + a +' и ' + b +' равна ' + result);
         }
+        function showRaznost() {
+            let inputA = document.getElementById('numberA');
+            let inputB = document.getElementById('numberB');
+
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
+            let result = a - b;
+            alert('Разность ' + a +' и ' + b +' равна ' + result);
+        }
+        function showProisvidenie() {
+            let inputA = document.getElementById('numberA');
+            let inputB = document.getElementById('numberB');
+
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
+            let result = a * b;
+            alert('Произведение ' + a +' и ' + b +' равно ' + result);
+        }
+        function showDelenie() {
+            let inputA = document.getElementById('numberA');
+            let inputB = document.getElementById('numberB');
+
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
+            let result = a / b;
+            alert('Деление ' + a +' и ' + b +' равно ' + result);
+        }
         function showAuthor() {
             let autor ='Автор страницы:\nИванова Анна Алексеевна';
-            alert(autor);
+            alert(author);
         }
-    
+        function changeOutput(buttonNum, backColor, textColor, borderF) {
+            let output = document.getElementById('output');
+            output.innerHTML = 'Нажата кнопка ' + buttonNum;
+            output.style.backgroundColor = backColor;
+            output.style.color = textColor;
+            output.style.border = borderF; 
+        }
+        function korzina() {
+            let inputG = document.getElementById('numberG')
+            let inputB = document.getElementById('numberB')
+            let inputK = document.getElementById('numberK')
+            let inputM = document.getElementById('numberM')
+            let inputA = document.getElementById('numberA')
+
+            let G = parseInt(inputG.value);
+            let B = parseInt(inputB.value);
+            let K = parseInt(inputK.value);
+            let M = parseInt(inputM.value);
+            let A = parseInt(inputA.value);
+
+            let res = (G*10)+(B*45)+(K*17)+(M*10)+(A*250);
+            let output1 = document.getElementById('output1')
+            output1.innerHTML = 'Общая цена: ' + res;
+        }
+        
+        function krugi(number) {
+            let del = document.getElementById(number)
+            del.style.opacity = '0'
+        }
+    </script>
+    <style>
+        .message {
+
+            .message {
+            cursor: pointer;
+            display: inline-block;
+            background-color: violet(100, 250, 250);
+            border: 1px solid ;
+            border-radius: 10px;
+            width: 250px;
+            height: 50px;
+            padding: 14px;
+            text-align: center;
+           }
+
+        }
+        #output {
+            border: 1px solid;
+            width: 300px;
+            height: 40px;
+        }
+        #output1 {
+            font-size: 30pt;
+            color: rgb(4, 182, 247);
+        }
+        .korzina {
+            margin-top: 20px;
+            border: 1px solid;
+            border-radius: 30px;
+            width: 340px;
+            height: 450px;
+            padding: 10px;
+        }
+        
+
+    </style>
+</head>
 
     </script>
     <style>
@@ -35,6 +128,59 @@
             padding: 14px;
             text-align: center;
         }
+        .krugi div {
+            display: inline-block;
+            width: 70px;
+            height: 70px;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 35px;
+            line-height: 67px;
+            margin-right: 20px;
+            color: #fff;
+            font-weight: bold;
+            margin-top: 30px;
+            border: 1px solid;
+        }
+
+        .krug1 {
+            background-color: #04c2fc
+        }
+
+        .krug2 {
+            background-color: #23c9fc;
+        }
+
+        .krug3 {
+            background-color: #54d6fd;
+        }
+
+        .krug4 {
+            background-color: #f50bf5;
+        }
+
+        .krug5 {
+            background-color: #f343d0;
+        }
+
+        .krug6 {
+            background-color: #fc5cee;
+        }
+
+        .krug7 {
+            background-color: #eef109;
+        }
+        .krug8 {
+            background-color: #eef85b;
+        }
+
+        .krug9 {
+            background-color: #f6fca5;
+        }
+
+        .krug10 {
+            background-color: #bfb4f3;
+        }
     </style>
 </head>
 
@@ -47,6 +193,45 @@
         <label>Второе число: <input type="number" value="7891" id="numberB"></label><br>
         <div class="message" onclick="showSum()">Найти суммы чисел</div>
         <div class="message"onclick="showAuthor()">Узнать, кто автор страницы</div>
+        <div class="message" onclick="showRaznost()">Найти разность чисел</div>
+        <div class="message" onclick="showDelenie()">Найти деление</div>
+        <div class="message" onclick="showProisvidenie()">Найти произведение</div>
+
+        <div>
+            <input type="button" value="Кнопка 1" onclick="changeOutput(1, 'red', 'yellow', 'green')">
+            <input type="button" value="Кнопка 2" onclick="changeOutput(2, 'black', 'lime', 'beige')">
+            <input type="button" value="Кнопка 3" onclick="changeOutput(3, 'pink', 'navy', 'violet')">
+            <input type="button" value="Кнопка 4" onclick="changeOutput(4, 'silver', 'lilac', 'tan')">
+        </div>
+
+        <div id="output"></div>
+        <div class="korzina"  >
+            <div><h1><b>Корзина товаров</b></h1></div>
+            <label>Груши(10р/шт): <br><input type="number" min="0" value="0" id="numberG"></label><br>
+            <label>Бананы(45р/шт): <br><input type="number" min="0" value="0" id="numberB"></label><br>
+            <label>Киви(17р/шт): <br><input type="number" min="0" value="0" id="numberK"></label><br>
+            <label>Мандаринки(10р/шт): <br><input type="number" min="0" value="0" id="numberM"></label><br>
+            <label>Ананасы(250р/шт): <br><input type="number" min="0" value="0" id="numberA"></label><br>
+            <input type="button" value="Рассчитать" onclick="korzina()" style="cursor: pointer;" >
+            <div id="output1"></div>
+            </div>
+
+        </div>
+
+        <div class="krugi">
+            <div class="krug1" id="1" onclick="krugi('1')">1</div>
+            <div class="krug2" id="2" onclick="krugi('2')">2</div>
+            <div class="krug3" id="3" onclick="krugi('3')">3</div>
+            <div class="krug4" id="4" onclick="krugi('4')">4</div>
+            <div class="krug5" id="5" onclick="krugi('5')">5</div>
+            <div class="krug6" id="6" onclick="krugi('6')">6</div>
+            <div class="krug7" id="7" onclick="krugi('7')">7</div>
+            <div class="krug8" id="8" onclick="krugi('8')">8</div>
+            <div class="krug9" id="9" onclick="krugi('9')">9</div>
+            <div class="krug10" id="10" onclick="krugi('10')">10</div>
+            </div>
+
+    
     </main>
 
     <footer>

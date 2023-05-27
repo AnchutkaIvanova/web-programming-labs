@@ -1,13 +1,13 @@
 body {
-    background-color:  rgb(240, 183, 221);
+    background-color:  rgb(150, 208, 245);
     color: rgb(243, 55, 55);
     font-family: Arial;
     margin: 0px;
 }
 
 header {
-    background: linear-gradient(to right , red,orange,yellow,green,lightblue, blue, rgb(162, 0, 255)); 
-    color: rgb(0, 103, 151);
+    background: linear-gradient(to right , rgb(243, 189, 205),rgb(250, 159, 159),rgb(247, 105, 164),rgb(255, 52, 177),rgb(238, 45, 151), rgb(255, 0, 98), rgb(243, 27, 110)); 
+    color: rgb(218, 54, 233);
     padding: 10px; 
     font-size: 16pt;
 }
@@ -17,7 +17,7 @@ main{
 }
 
 header:hover {
-    background: linear-gradient(to top, rgb(212, 208, 252), hsl(240, 100%, 50%) );
+    background: linear-gradient(to top, rgb(212, 208, 252), hsl(189, 86%, 57%) );
 }
 
 header:active {
@@ -26,8 +26,8 @@ header:active {
 }
 
 footer {
-    background: linear-gradient(to right , red,orange,yellow,rgb(21, 241, 21),lightblue, blue, rgb(162, 0, 255));
-    color: rgb(175, 10, 10);
+    background: linear-gradient(to right , rgb(240, 200, 238),rgb(247, 138, 210),rgb(228, 83, 196),rgb(250, 108, 219),lightblue, rgb(255, 97, 97), rgb(186, 95, 238));
+    color: rgb(247, 14, 65);
     padding: 10px; 
     font-size: 14pt;
     margin: 0px;
