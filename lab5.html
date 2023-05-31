@@ -44,7 +44,7 @@
             alert('Деление ' + a +' и ' + b +' равно ' + result);
         }
         function showAuthor() {
-            let autor ='Автор страницы:\nИванова Анна Алексеевна';
+            let author ='Автор страницы:\nИванова Анна Алексеевна';
             alert(author);
         }
         function changeOutput(buttonNum, backColor, textColor, borderF) {
@@ -56,10 +56,10 @@
         }
         function korzina() {
             let inputG = document.getElementById('numberG')
-            let inputB = document.getElementById('numberB')
+            let inputB = document.getElementById('numberBa')
             let inputK = document.getElementById('numberK')
             let inputM = document.getElementById('numberM')
-            let inputA = document.getElementById('numberA')
+            let inputA = document.getElementById('numberAa')
 
             let G = parseInt(inputG.value);
             let B = parseInt(inputB.value);
@@ -69,7 +69,7 @@
 
             let res = (G*10)+(B*45)+(K*17)+(M*10)+(A*250);
             let output1 = document.getElementById('output1')
-            output1.innerHTML = 'Общая цена: ' + res;
+            output1.innerHTML = 'Общая цена: ' + res + "руб";
         }
         
         function krugi(number) {
@@ -192,7 +192,7 @@
         <label>Первое число: <input type="number" value="5154" id="numberA"></label><br>
         <label>Второе число: <input type="number" value="7891" id="numberB"></label><br>
         <div class="message" onclick="showSum()">Найти суммы чисел</div>
-        <div class="message"onclick="showAuthor()">Узнать, кто автор страницы</div>
+        <div class="message" onclick="showAuthor()">Узнать, кто автор страницы</div>
         <div class="message" onclick="showRaznost()">Найти разность чисел</div>
         <div class="message" onclick="showDelenie()">Найти деление</div>
         <div class="message" onclick="showProisvidenie()">Найти произведение</div>
@@ -208,10 +208,10 @@
         <div class="korzina"  >
             <div><h1><b>Корзина товаров</b></h1></div>
             <label>Груши(10р/шт): <br><input type="number" min="0" value="0" id="numberG"></label><br>
-            <label>Бананы(45р/шт): <br><input type="number" min="0" value="0" id="numberB"></label><br>
+            <label>Бананы(45р/шт): <br><input type="number" min="0" value="0" id="numberBa"></label><br>
             <label>Киви(17р/шт): <br><input type="number" min="0" value="0" id="numberK"></label><br>
             <label>Мандаринки(10р/шт): <br><input type="number" min="0" value="0" id="numberM"></label><br>
-            <label>Ананасы(250р/шт): <br><input type="number" min="0" value="0" id="numberA"></label><br>
+            <label>Ананасы(250р/шт): <br><input type="number" min="0" value="0" id="numberAa"></label><br>
             <input type="button" value="Рассчитать" onclick="korzina()" style="cursor: pointer;" >
             <div id="output1"></div>
             </div>
