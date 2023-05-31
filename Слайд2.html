@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Иванова Анна Алексеевна. РГЗ</title>
+    <link rel="stylesheet" href="ma.css">
+        
+    </style>
+    <script>
+        function shet(){
+        let data = ['1-04-2023', '4-04-2023', '5-04-2023', '6-04-2023', '7-04-2023',
+                    '8-04-2023', '11-04-2023', '12-04-2023', '13-04-2023', '14-04-2023',
+                    '15-04-2023', '18-04-2023', '19-04-2023', '20-04-2023', '21-04-2023',
+                    '22-04-2023', '25-04-2023', '26-04-2023', '27-04-2023', '28-04-2023'];
+            let kurs = [124.5,139.5,150,151.5,150,161.5,158.5,152.5,149,140,136,139.5,142,152.5,143.5,137,137,137,139,138];
+            let tab = document.getElementById('tab');
+            let min = Math.min(...kurs);
+            document.getElementById('min').innerHTML = 'Минимальное значение: ' + min;
+            let max = Math.max(...kurs);
+            document.getElementById('max').innerHTML = 'Максимальное значение: ' + max;
+            let sum = 0;
+            for (let i = 0; i < kurs.length; i++) {
+            sum += kurs[i];
+            }
+            let avg = sum / kurs.length;
+            let variance = 0;
+            for (let i = 0; i < kurs.length; i++) {
+            variance += Math.pow(kurs[i] - avg, 2);
+            }
+            let kv = Math.sqrt(variance / kurs.length);
+            document.getElementById('kv').innerHTML = 'Среднеквадратическое отклонение: ' + kv;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        
+        <menu>
+            <img src="https://kuban.tns-e.ru/upload/medialibrary/622/62254e7eb859ca19740369621957417e/kuban.png" width="90px">
+            <a href="Слайд1.html">О компании</a>
+            <a href="Слайд2.html" style="color: rgb(38, 8, 235);">Основные финансовые показатели</a>
+            <a href="Слайд3.html">Контактные данные</a>
+            <a href="Слайд4.html">Видео</a>
+           
+        </menu>
+    </header>
+    <main>
+        <h1>Основные финансовые показатели</h1>
+        <p><b>Капитализация на конец апреля:</b>  4.92 млрд руб.</p>
+        <p><b>Общее число акций, обращающихся на Московской фондовой бирже:</b> 10 006 886</p>
+        <p>
+            <h2>Таблица с ценами закрытия за весь апрель</h2>
+            <table class="tab" border="2" id="tab">
+                <tr>
+                    <td>01-04-2023</td>
+                    <td>124.5</td>
+                </tr>
+                <tr>
+                    <td>04-04-2023</td>
+                    <td>139.5</td>
+                </tr>
+                <tr>
+                    <td>05-04-2023</td>
+                    <td>150</td>
+                </tr>
+                <tr>
+                    <td>06-04-2023</td>
+                    <td>151.5</td>
+                </tr>
+                <tr>
+                    <td>07-04-2023</td>
+                    <td>150</td>
+                </tr>
+                <tr>
+                    <td>08-04-2023</td>
+                    <td>161.5</td>
+                </tr>
+                <tr>
+                    <td>11-04-2023</td>
+                    <td>158.5</td>
+                </tr>
+                <tr>
+                    <td>12-04-2023</td>
+                    <td>152.5</td>
+                </tr>
+                <tr>
+                    <td>13-04-2023</td>
+                    <td>149</td>
+                </tr>
+                <tr>
+                    <td>14-04-2023</td>
+                    <td>140</td>
+                </tr>
+                <tr>
+                    <td>15-04-2023</td>
+                    <td>136</td>
+                </tr>
+                <tr>
+                    <td>18-04-2023</td>
+                    <td>139.5</td>
+                </tr>
+                <tr>
+                    <td>19-04-2023</td>
+                    <td>142</td>
+                </tr>
+                <tr>
+                    <td>20-04-2023</td>
+                    <td>152.5</td>
+                </tr>
+                <tr>
+                    <td>21-04-2023</td>
+                    <td>143.5</td>
+                </tr>
+                <tr>
+                    <td>22-04-2023</td>
+                    <td>137</td>
+                </tr>
+                <tr>
+                    <td>25-04-2023</td>
+                    <td>137</td>
+                </tr>
+                <tr>
+                    <td>26-04-2023</td>
+                    <td>137</td>
+                </tr>
+                <tr>
+                    <td>27-04-2023</td>
+                    <td>139</td>
+                </tr>
+                <tr>
+                    <td>28-04-2023</td>
+                    <td>138</td>
+                </tr>
+
+            </table>
+        </p>
+        <p><button onclick="shet()">Вычислить</button></p> 
+        <p id="min" style="color: #080806;">Минимальное значение: </p>
+        <p id="max" style="color: #0b0c08;">Максимальное значение: </p>
+        <p id="kv" style="color: #050502;">Среднеквадратическое отклонение: </p>
+        
+
+
+    </main>
+    <footer>
+        &copy; Иванова Анна Алексеевна, ФБИ-14, 2 курс, 2023
+    </footer>
+</body>
+</html>
