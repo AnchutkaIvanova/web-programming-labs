@@ -17,4 +17,13 @@ function showDaysCount () {
     document.getElementById('dr').innerHTML = 'Количество дней с даты рождения: '+ daysCount;
     inputDate.style.color = 'red';
 }
-
+function yd() {
+    document.getElementById('d').value = "";
+    document.getElementById('dr').innerHTML = "";
+}
+function showTime() {
+    let today = new Date();
+    let currentTime = today.toLocaleTimeString('ru-RU');
+    document.getElementById('time').innerHTML = currentTime;
+}
+setInterval(showTime,1000);
