@@ -9,11 +9,11 @@
     <script>
         function addBlocks() {
             let blocks = document.getElementById('blocks');
-            for(let i=0; i<10;i++){
-                let blok=document.createElement('div');
-                block.innerHTML='Блок №'+(i+1)+':'+(2*i**2);
+            for (let i = 0; i<10; i++){
+                let block = document.createElement('div');
+                block.innerHTML = 'Блок №' + (i+1) + ': ' + (2 * i**2);
 
-                block.appendChild(blok);
+                blocks.appendChild(block);
             }
         }
     </script>
@@ -24,8 +24,8 @@
     </header>
 
     <main>
-        <button onclick="addBlocks()"> Создать блоки</button>
-        <div id="blocks" ></div>
+        <button onclick="addBlocks()">Создать блоки</button>
+        <div  id="blocks"></div>
     </main>
 
     <footer>
