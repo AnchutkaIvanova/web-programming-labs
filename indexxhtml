@@ -49,6 +49,10 @@
         <li>
             <a href="Cлайд1.html" target="_blank" >РГЗ</a>
         </li>
+
+        <li>
+            <a href="lab8.html" target="_blank" >Лабораторная 8</a>
+        </li>
        </Ol>
     </main>
 </body>
